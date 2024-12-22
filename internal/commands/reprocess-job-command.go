@@ -20,7 +20,7 @@ func resyncPayload(jobId string) (*bytes.Buffer, error) {
 	return bytes.NewBuffer(postBody), nil
 }
 
-func RunResync(jobId string, kind string, actionType string) {
+func RunReprocess(jobId string, kind string, actionType string) {
 	payload, err := resyncPayload(jobId)
 	if err != nil {
 		fmt.Println("Failed to generate payload")

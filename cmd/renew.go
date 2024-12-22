@@ -13,7 +13,7 @@ var renewCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		job, _ := cmd.Flags().GetString("j")
 		kind, _ := cmd.Flags().GetString("k")
-		commands.RunResync(job, kind, "renew")
+		commands.RunReprocess(job, kind, "renew")
 	},
 }
 
